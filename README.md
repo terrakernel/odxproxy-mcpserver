@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/terrakernel-odxproxy-mcpserver-badge.png)](https://mseep.ai/app/terrakernel-odxproxy-mcpserver)
+
 # ODXProxy MCP Server
 
 Official MCP Server for ODXProxy by TERRAKERNEL. PTE. LTD.
