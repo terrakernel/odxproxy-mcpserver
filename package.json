@@ -1,0 +1,44 @@
+{
+  "name": "odxproxy-mcpserver",
+  "version": "0.1.0",
+  "description": "Official MCP Server for ODXProxy",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrakernel/odxproxy-mcpserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/terrakernel/odxproxy-mcpserver/issues"
+  },
+  "author": "julian richie wajong <julian.wajong@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "dotenv": "^17.2.2",
+    "jest": "^30.1.3",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.4.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "@terrakernel/odxproxy-client-js": "^0.1.5",
+    "zod": "^3.25.76"
+  }
+}

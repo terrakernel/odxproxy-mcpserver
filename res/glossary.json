@@ -1,0 +1,21 @@
+[
+  {
+    "model": "res.partner",
+    "aliases": ["partner", "contact", "customer", "vendor", "supplier"],
+    "category": "contacts",
+    "available_actions": ["create", "read", "search_read", "write", "search_count"],
+    "description": "Represents an individual or company in Odoo. Partners can act as customers, vendors, or internal contacts.",
+    "aliases_many2one_fields": ["partner_id", "partner"],
+    "examples": [
+      { "input": "Create a new customer called ACME Corp", "action": "create" },
+      { "input": "Update the email of Julian to julian@example.com", "action": "write" },
+      { "input": "Find vendor with phone number 12345", "action": "search_read" },
+      { "input":  "How many customers or vendors are there in singapore?", "action": "search_count"},
+      {"input":  "Show me the customer with the id of 123", "action": "read"}
+    ],
+    "hints": [
+      "Customers and Vendors are both stored in res.partner.",
+      "A partner can be both a customer and a vendor simultaneously."
+    ]
+  }
+]
